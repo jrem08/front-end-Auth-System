@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL ?? "http://localhost:3001/api/v1";
 
@@ -107,6 +108,14 @@ const Login = () => {
           {feedback.text}
         </p>
       )}
+      
+        <p className="text-sm text-slate-600 mt-4 text-center">
+        ¿No tienes cuenta?
+        <Link to="/register" className="text-indigo-600 font-semibold hover:underline ml-1">
+        Crear cuenta
+        </Link>
+        </p>
+
     </section>
   );
 };
